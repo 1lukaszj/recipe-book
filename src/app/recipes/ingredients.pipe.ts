@@ -23,7 +23,6 @@ export class IngredientsPipe implements PipeTransform {
     }
 
     if (_.size(args) !== 0) {
-      console.log(recipesFiltered);
       return recipesFiltered
     } else {
       return recipes

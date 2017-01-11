@@ -61,7 +61,6 @@ export class RecipeService {
       .subscribe(
         (data: Recipe[]) => {
           this.recipes = data;
-          console.log(data);
           this.uniqueIngredients = this.getUniqueIngredients();
           this.recipesChanged.emit(this.recipes);
         }
