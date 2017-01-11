@@ -1,11 +1,9 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-//import { ModuleWithProviders} from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs';
-
-import {Recipe} from '../recipe';
-import {ShoppingListService} from '../../shopping-list/shopping-list.service';
-import {RecipeService} from '../recipe.service';
+import {Component, OnInit, OnDestroy, trigger, state, style, transition, animate} from "@angular/core";
+import {Router, ActivatedRoute} from "@angular/router";
+import {Subscription} from "rxjs";
+import {Recipe} from "../recipe";
+import {ShoppingListService} from "../../shopping-list/shopping-list.service";
+import {RecipeService} from "../recipe.service";
 
 @Component({
   selector: 'rb-recipe-detail',
@@ -19,7 +17,8 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   constructor(private sls: ShoppingListService,
               private router: Router,
               private route: ActivatedRoute,
-              private recipesService: RecipeService) {};
+              private recipesService: RecipeService) {
+  };
 
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
