@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-6">
+    <p-autoComplete
+      [(ngModel)]="selectedIngredients"
+      [suggestions]="filteredIngredientsMultiple"
+      (completeMethod)="filterIngredientMultiple($event)"
+      styleClass="wid300"
+      [minLength]="1"
+      placeholder="Filter by ingredients..."
+      field="name"
+      [multiple]="true">
+    </p-autoComplete>
+  </div>
+  <div class="col-xs-6">
+    <a class="btn btn-success pull-right" [routerLink]="['new']">New Recipe</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <rb-recipe-item *ngFor="let recipe of recipes | ingredients:selectedIngredients; let i = index" [recipe]="recipe" [recipeId]="recipe.id"></rb-recipe-item>
+    </ul>
+  </div>
+</div>
