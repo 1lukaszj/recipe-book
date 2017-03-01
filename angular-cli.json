@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.25.5",
+    "version": "1.0.0-beta.26",
     "name": "recipe-book"
   },
   "apps": [
@@ -15,7 +15,7 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "rb",
+      "prefix": "app",
       "mobile": false,
       "styles": [
         "styles.css",
