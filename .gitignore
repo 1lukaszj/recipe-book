@@ -36,3 +36,5 @@ Thumbs.db
 /samples/
 .editorconfig
 /debug.log
+/how-to-use.txt
+/serve.cmd
